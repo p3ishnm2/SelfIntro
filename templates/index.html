@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+<title>自己商品紹介</title>
+<h1>自己商品紹介</h1>
+<hr noshade>
+<h3>Upload & Analyze new File</h3>
+<form action="" method=post enctype=multipart/form-data>
+  <p><input type=file name=file><input type=submit value=Upload></p>
+</form>
+{% if score %}
+<p><b>Score | {{score}}</b>[%]</p>
+<hr noshade>
+{% endif %}
+{% if message %}
+<h3>{{ message }}</h3>
+{% endif %}
+{% if desc %}
+<p>{{ desc }}</p>
+{% endif %}
+<hr noshade>
+{% if img %}
+<p><img src={{img}} height="50%" width="50%" alt={{img}}></p>
+{% endif %}
+{% endblock %}
